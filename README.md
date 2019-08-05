@@ -138,6 +138,8 @@ Finally, I tried running Medaka on both the Medaka and Nanopolish consensus asse
 
 Basecalling was pretty quick on the GTX 1080 GPU of our [MinION desktop](https://github.com/rrwick/MinION-Desktop). The fast and fast-_Kp_ models completed basecalling in \~8.5 minutes (\~1,000,000 bases/sec). The HAC, HAC-mod and HAC-_Kp_ models each took \~50 minutes (\~180,000 bases/sec). We didn't try basecalling on the CPU but based on past experience it would be much slower than the GPU. The speed performance of Guppy is correlated with the number of parameters in its neural network model. The HAC models have \~7× more parameters than the fast models and are \~6× slower.
 
+Racon is reasonably fast and can do one round of polishing in a few minutes on my laptop. Rebaler does many rounds of Racon and probably takes closer to an hour on a laptop. A recent Racon release added support for GPU-based polishing – haven't yet tried it myself but is presumably much faster.
+
 It's also worth noting that Medaka is much faster than Nanopolish. I didn't time them in a systematic manner, but Medaka ran on my laptop in a few minutes while Nanopolish took about an hour using many nodes of a computing cluster.
 
 
