@@ -10,7 +10,6 @@ __Ryan R. Wick<sup>1</sup>, Louise M. Judd<sup>1</sup> and Kathryn E. Holt<sup>1
 
 <p align="center"><img src="images/logo-bottom.png" alt="logo" width="100%"></p>
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1188469.svg)](https://doi.org/10.5281/zenodo.1188469)
 
 
 ## Table of contents
@@ -168,7 +167,7 @@ To summarise our results as a set of recommendations:
 
 Medaka is trained on a per-model basis and the Medaka documentation states 'It is crucially important to specify the correct model'. The Holt lab mainly uses the HAC-_Kp_ to basecall, and the fact that there isn't a corresponding Medaka model has discouraged me from using it in the past. However, our results show that Medaka can work quite nicely even if you aren't using the exact same basecalling model it was trained on. This is encouraging and means I'll be using Medaka more in the future!
 
-Our best assemblies were about 99.97% accurate, which equates to about one error per \~3000 bases (\~1600 errors in a 5 Mbp genome). Certainly an improvement over ONT results in the past but still too high of an error rate to replace Illumina sequencing in all contexts. Hopefully ONT's new R10 pore will deliver greater accuracies. The Holt lab will be trying them out in the near future!
+Our best assemblies were about 99.97% accurate, which equates to one error per \~3000 bases (\~1600 errors in a 5 Mbp genome). Certainly an improvement over ONT results in the past but still too high of an error rate to replace Illumina sequencing in all contexts. Hopefully ONT's new R10 pore will deliver greater accuracies. The Holt lab will be trying them out in the near future!
 
 
 
