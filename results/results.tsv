@@ -1,0 +1,31 @@
+Model	Polish	Accuracy	Qscore
+Fast	Flye	99.260%	21.305
+Fast	Racon	99.526%	23.240
+Fast	Medaka	99.554%	23.509
+Fast	Medaka × 2	99.583%	23.795
+Fast	Nanopolish	99.786%	26.706
+Fast	Nanopolish + Medaka	99.573%	23.697
+HAC	Flye	99.436%	22.484
+HAC	Racon	99.777%	26.521
+HAC	Medaka	99.809%	27.191
+HAC	Medaka × 2	99.810%	27.221
+HAC	Nanopolish	99.835%	27.827
+HAC	Nanopolish + Medaka	99.844%	28.069
+HAC-mod	Flye	99.711%	25.391
+HAC-mod	Racon	99.896%	29.812
+HAC-mod	Medaka	99.967%	34.750
+HAC-mod	Medaka × 2	99.967%	34.816
+HAC-mod	Nanopolish	99.862%	28.603
+HAC-mod	Nanopolish + Medaka	99.957%	33.616
+Fast-Kp	Flye	99.784%	26.651
+Fast-Kp	Racon	99.743%	25.894
+Fast-Kp	Medaka	99.863%	28.638
+Fast-Kp	Medaka × 2	99.860%	28.529
+Fast-Kp	Nanopolish	99.862%	28.587
+Fast-Kp	Nanopolish + Medaka	99.861%	28.575
+HAC-Kp	Flye	99.814%	27.294
+HAC-Kp	Racon	99.933%	31.710
+HAC-Kp	Medaka	99.966%	34.686
+HAC-Kp	Medaka × 2	99.963%	34.319
+HAC-Kp	Nanopolish	99.866%	28.726
+HAC-Kp	Nanopolish + Medaka	99.961%	34.090

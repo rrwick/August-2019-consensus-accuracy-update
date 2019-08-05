@@ -1,0 +1,49 @@
+---
+title: "Assembly accuracy comparison - August 2019"
+author: "Ryan Wick"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+library(knitr)
+opts_chunk$set(fig.width=7.5, fig.height=3.5, dpi=300, fig.path='./plots/', echo=T, dev=c('png','pdf'), warning=FALSE, message=FALSE)
+```
+
+```{r pressure, echo=FALSE}
+results <- read_tsv("results.tsv")
+results$Polish <- factor(results$Polish,
+                         levels = c("Flye", "Racon", "Medaka", "Medaka × 2", "Nanopolish", "Nanopolish + Medaka"))
+results$Model <- factor(results$Model,
+                         levels = c("Fast", "Fast-Kp", "HAC", "HAC-mod", "HAC-Kp"))
+```
+
+
+```{r}
+plot_breaks <- seq(0, 50, 2)
+plot_minor_breaks <- seq(0, 50, 1)
+
+ggplot(data = results, aes(fill = Polish, y = Qscore, x = Model)) +
+  geom_bar(width=0.75, position = position_dodge(0.8), stat = "identity") +
+  theme_bw() + theme(panel.grid.major.x = element_blank(), legend.title=element_blank(), legend.spacing.x = unit(0.1, 'cm')) +
+  coord_cartesian(ylim = c(20, 36)) +
+  scale_y_continuous(breaks=plot_breaks, minor_breaks = plot_minor_breaks,
+                     sec.axis = sec_axis(~ ., name = "Consensus identity",
+                                         labels = function(x) paste0(sprintf("%.3f", 100.0 * (1 - 1/10^(x/10.0))), "%"),
+                                         breaks = plot_breaks)) +
+  labs(title = NULL, y = "Qscore", x = NULL)
+```
+
+
+```{r}
+qscores <- data.frame(filter(results, Polish == "Racon")$Qscore,
+                      filter(results, Polish == "Medaka")$Qscore,
+                      filter(results, Polish == "Nanopolish")$Qscore)
+colnames(qscores) <- c("Racon", "Medaka", "Nanopolish")
+
+ggplot(data = qscores) +
+  geom_point(aes(x = Racon, y = Medaka), colour = "#00ba38") +
+  geom_point(aes(x = Racon, y = Nanopolish), colour = "#619cff") +
+  theme_bw()
+  labs(title = NULL, y = "Qscore", x = NULL)
+```
