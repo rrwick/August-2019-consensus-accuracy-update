@@ -165,7 +165,7 @@ To summarise our results as a set of recommendations:
 2) If you're sequencing native DNA, use a model that was trained on reads with the same bases modifications as your sample, ideally from the same species.
 3) Polishing with Medaka is fast, effective and usually preferable over Nanopolish. Don't bother with multiple rounds of Medaka polishing.
 
-Medaka is trained on a per-model basis and the Medaka documentation states 'It is crucially important to specify the correct model'. The Holt lab mainly uses the HAC-_Kp_ to basecall, and the fact that there isn't a corresponding Medaka model has discouraged me from using it in the past. However, our results show that Medaka can work quite nicely even if you aren't using the exact same basecalling model it was trained on. This is encouraging and means I'll be using Medaka more in the future!
+Medaka is trained on a per-model basis and the Medaka documentation states 'It is crucially important to specify the correct model'. The Holt lab mainly uses the HAC-_Kp_ basecalling model, and the fact that there isn't a corresponding Medaka model has discouraged me from using it in the past. However, our results show that Medaka can work quite nicely even if you aren't using the exact same basecalling model it was trained on. This is encouraging and means I'll be using Medaka more in the future!
 
 Our best assemblies were about 99.97% accurate, which equates to one error per \~3000 bases (\~1600 errors in a 5 Mbp genome). Certainly an improvement over ONT results in the past but still too high of an error rate to replace Illumina sequencing in all contexts. Hopefully ONT's new R10 pore will deliver greater accuracies. The Holt lab will be trying them out in the near future!
 
